@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Primerange{
+    public static void main(String[] args) {
+        int i,j,count=0,sum=0,n;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter range n:"); 
+        n=sc.nextInt();
+        for(i=2;i<=n;i++)
+        {
+            sum=0;
+            for(j=1;j<=i;j++)
+            {
+                if(i%j==0)
+                sum++;
+            }
+            if(sum==2)
+            count++;
+        }
+        System.out.println("count is:"+count);
+    }
+}
+
+*************************************************************
+enter range n:
+20
+count is:8
