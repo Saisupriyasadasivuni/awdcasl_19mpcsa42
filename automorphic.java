@@ -13,3 +13,8 @@ System.out.println("Automorphic number");
 else
 System.out.println("Not an Automorphic number");
 }}
+**************************************
+output:
+enter a number
+76
+Automorphic number
