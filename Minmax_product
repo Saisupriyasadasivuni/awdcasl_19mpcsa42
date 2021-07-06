@@ -1,0 +1,36 @@
+import java.util.*;
+class minmax_product
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int max,min;
+System.out.println("enter n1:");
+int n1=sc.nextInt();
+int a[]=new int[n1];
+for(int i=0;i<n1;i++)
+a[i]=sc.nextInt();
+System.out.println("enter n2:");
+int n2=sc.nextInt();
+int b[]=new int[n2];
+for(int i=0;i<n1;i++)
+b[i]=sc.nextInt();
+System.out.println();
+Arrays.sort(a);
+max=a[n1-1];
+Arrays.sort(b);
+min=b[0];
+ System.out.println("product of max of 1st array & min of 2nd array=" + max*min);
+}
+}
+
+/*
+output:
+enter n1:
+6
+5 7 9 3 6 2
+enter n2:
+6
+1 2 6 -1 0 9
+product of max of 1st array & min of 2nd array=-9
+*/
