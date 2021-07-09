@@ -1,0 +1,41 @@
+import java.util.*;
+import java.lang.*;
+class comparison
+{
+public static void main(String args[])
+{
+String str;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter String:");
+str=sc.next();
+int u=0,l=0,d=0,s=0;
+char ch[]=str.toCharArray();
+int p=ch.length;
+for(int i=0;i<p;i++)
+{
+if(Character.isUpperCase(ch[i]))
+     u++;
+else if(Character.isLowerCase(ch[i]))
+     l++;
+else if(Character.isDigit(ch[i]))
+     d++;
+else
+     s++;
+}
+if(u==l && l==d && d==s)
+    System.out.println("YES ,the number of digits,uppercase,lowercase letters and symbols are EQUAL");
+else
+     System.out.println("NO ,the number of digits,uppercase,lowercase letters and symbols are NOT EQUAL");
+}}
+
+/*
+output:
+enter String:
+AdC@23#e
+YES ,the number of digits,uppercase,lowercase letters and symbols are EQUAL
+
+output:
+enter String:
+Aditya@12#
+NO ,the number of digits,uppercase,lowercase letters and symbols are NOT EQUAL
+*/
