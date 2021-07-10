@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.*;
+class reverse{
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String str;
+        System.out.println("enter string:");
+        str=sc.next();
+        char ch[]= str.toCharArray();
+        int n=ch.length;
+        char even[]=new char[n/2];
+        char odd[]=new char[n-even.length];
+        int j=0,k=0;
+        for(int i=0;i<n;i++)
+        {
+            if(i%2==0)
+            {
+              odd[j]=ch[i];
+              j++;
+            }
+            else 
+            {
+              even[k]=ch[i];
+              k++;
+            }
+        }
+        System.out.print("odd pose:");
+        for(int i=0;i<odd.length;i++)
+        System.out.print(odd[i]);
+        System.out.print(" even pose:");
+        for(int i=0;i<even.length;i++)
+        System.out.print(even[i]); 
+    }}
+
+/* 
+Output:
+enter string:
+786457
+odd pos:765 even pos:847
+*/
