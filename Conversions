@@ -1,0 +1,41 @@
+import java.util.*;
+class conversions{
+    public static void main(String[] args) {
+        String str;
+        int n,opt;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a decimal no.");
+        n=sc.nextInt();
+        System.out.println("1.Decimal to Binary\n2.Decimal to Octal\n3.Decimal to Hexa");
+        System.out.println("choose your choice");
+        opt=sc.nextInt();
+        switch (opt)
+        {
+            case 1:
+                str=Integer.toBinaryString(n);
+                System.out.println("decimal to binary is"+str);
+                break;
+            case 2:
+                str=Integer.toOctalString(n);
+                System.out.println("decimal to octal is"+str);
+                break;
+            case 3:
+                str=Integer.toHexString(n);
+                System.out.println("decimal to hexa is"+str);
+                break;
+            default :
+            System.out.println("choose either 1,2 or 3");
+        }
+    }
+}
+/*
+Output:
+enter a decimal no.5
+
+1.Decimal to Binary
+2.Decimal to Octal
+3.Decimal to Hexa
+choose your choice
+1
+decimal to binary is101
+*/
