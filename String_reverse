@@ -1,0 +1,31 @@
+import java.util.*;
+class string_reverse{
+    public static void main(String[] args) {
+        String str;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the string");
+        str=sc.nextLine();
+        String s[]=str.split(" ");
+        int n= s.length;
+        for(int i=0;i<n;i++)
+        {
+           char ch[]=s[i].toCharArray();
+            int m=ch.length;
+              char r[]=new char[m];
+           for(int j=0;j<m;j++)
+               {
+                 r[j]=ch[m-j-1];
+                 System.out.print(r[j]);
+                }
+             System.out.print(" ");
+          }
+        
+    }
+}
+
+/*
+Output:
+Enter the string:
+hello world
+olleh dlrow
+*/
