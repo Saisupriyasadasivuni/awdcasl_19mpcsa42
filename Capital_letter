@@ -1,0 +1,19 @@
+import java.util.*;
+class capital_letter{
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String str;
+        System.out.println("enter string"); 
+        str=sc.nextLine();
+        String s[]=str.split(" ");
+        int n=s.length;
+        for(int i=0;i<n;i++)
+        {
+            char ch[]=s[i].toCharArray();
+            ch[0]=Character.toUpperCase(ch[0]);
+            String x=String.valueOf(ch);
+            System.out.print(x);
+            System.out.print(" ");
+        }
+    }
+}
