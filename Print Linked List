@@ -1,0 +1,16 @@
+static void printLinkedList(SinglyLinkedListNode head)
+ {
+      SinglyLinkedListNode temp;
+      for(temp=head;temp!=null;temp=temp.next)
+              System.out.println(temp.data);
+ }
+/*
+Input:
+2 
+16 
+13
+Output:
+16 
+13
+Hacker rank program method...
+*/
