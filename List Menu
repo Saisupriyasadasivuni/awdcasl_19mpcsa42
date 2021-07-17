@@ -1,0 +1,53 @@
+import java.util.*;
+class listmenu
+{
+  public static void main (String args[])
+  {
+    Scanner sc=new Scanner(System.in);
+   LinkedList<Integer>a=new LinkedList<Integer>();
+  int n,x; 
+System.out.println("1.BeginInsert\n2.EndInsert\n3.PositionInsert\n4.BeginDelete\n5.EndDelete\n6.PositioDelete\n7.Display\n8.Exit");
+int ch;
+do
+{
+System.out.println("Enter your choice.......");
+ch=sc.nextInt();
+  switch(ch)
+  {
+   case 1:
+              	 System.out.println("enter value to insert begin"); 
+              	 a.addFirst(sc.nextInt());
+               	break;
+   case 2:
+	System.out.println("enter value to insert last"); 
+	a.addLast(sc.nextInt());
+	break;
+   case 3:
+	System.out.println("enter position and value to insert"); 
+	n=sc.nextInt();
+	x=sc.nextInt();
+	a.add(n,x); 
+	break;
+   case 4:
+	a.removeFirst();
+	break;
+   case 5:
+	a.removeLast();
+	break;
+   case 6:
+	System.out.println("enter position  to delete value"); 
+	a.remove(sc.nextInt());
+	break;
+  case 7:
+     	System.out.println(a);
+	break;
+  case 8:
+	break;
+  default:
+	System.out.println("InValid input\nEnter numbers from 1 to7");
+   }
+System.out.println("1.BeginInsert\n2.EndInsert\n3.PositionInsert\n4.BeginDelete\n5.EndDelete\n6.PositioDelete\n7.Display\n8.Exit");
+}
+ while(ch<8);
+}
+}
