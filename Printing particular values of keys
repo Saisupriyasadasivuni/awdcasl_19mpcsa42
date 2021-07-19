@@ -1,0 +1,16 @@
+//printing values of particular keys
+class Solution{
+    static int map(int n, String keys[], int arr[], String s)
+    {
+        // code here
+        HashMap<String,Integer>h1=new HashMap<String,Integer>();
+        for(int i=0;i<n;i++)
+        {
+            h1.put(keys[i],arr[i]);
+        }
+        if(h1.containsKey(s))
+            return h1.get(s);
+        else
+            return -1;
+    }
+}
