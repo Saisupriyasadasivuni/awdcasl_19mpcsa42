@@ -1,0 +1,25 @@
+import java.util.*;
+class string_frequency
+{
+public static void main(String args[])
+{
+HashMap<String,Integer>h1=new HashMap<String,Integer>();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n value");
+int n=sc.nextInt();
+String str[] =new String[n];
+for(int i=0;i<n;i++)
+   str[i]=sc.next();
+for(int i=0;i<n;i++)
+{
+if(h1.containsKey(str[i]))
+     h1.put(str[i],h1.get(str[i])+1);
+else
+     h1.put(str[i],1);
+}
+for(Map.Entry<String,Integer>i:h1.entrySet())
+{
+if(i.getValue()>2)
+System.out.println(i);
+//System.out.print(i.getKey()+"-->"+i.getValue()+"\t");
+}}}
