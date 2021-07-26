@@ -1,0 +1,30 @@
+import java.util.*;
+class factorial_trailing_zeroes{
+    public int trailingZeroes(int n) {
+        int m=fact(n);
+        int rem,count=0;
+        while(m!=0)
+        {
+            rem=m%10;
+            if(rem==0)
+               count++;
+            m=m/10;
+        }
+        return count;
+    }
+    public static int fact(int n)
+   {
+ if(n==1)
+   return n;
+ else
+   return n*fact(n-1);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a num:");
+        int x=sc.nextInt();
+        factorial f=new factorial();
+        System.out.println(f.trailingZeroes(x));
+    }
+}
