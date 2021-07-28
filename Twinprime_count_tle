@@ -1,0 +1,44 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Solution {
+public static void main(String args[]){ 
+    Scanner sc=new Scanner(System.in); 
+    long n=1000000000; 
+    long prime[]=new long[n+1]; 
+    for(long i=0;i<=n;i++) 
+    { 
+        prime[i]=1; 
+    } 
+    prime[1]=0; 
+    for(long p=2;p*p<=n;p++) 
+    { 
+        if(prime[p]==1) 
+        for(long i=p*p;i<=n;i=i+p) 
+        { 
+            if(prime[i]==1) 
+            prime[i]=0; 
+        } 
+    } 
+    long start,end; 
+    int count=0; 
+    start=sc.nextInt(); 
+    end=sc.nextInt(); 
+    for(long j=start;j<=end;j++) 
+    { 
+        if(end-start>=2) 
+            if((prime[j]==1)&&(prime[j+2]==1)) 
+                count++; 
+    } 
+    System.out.println(count);
+    }   
+}
