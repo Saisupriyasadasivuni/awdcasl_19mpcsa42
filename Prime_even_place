@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class prime_even_place{
+    public static void evenPrimes(int start,int end) {
+        int i,j,count=0,sum=0;
+        for(i=2;i<end;i++)
+        {
+            sum=0;
+            for(j=start;j<=i;j++)
+            {
+                if(i%j==0)
+                sum++;
+            }
+            if(sum==2)
+           {
+            count++;
+            if(count%2==0)
+                System.out.print(i+" ");
+           }
+        }
+    }
+    public static void main(String[] args) {
+        int start,end;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter start & end range n:"); 
+        start=sc.nextInt(); 
+        end=sc.nextInt(); 
+       evenPrimes(start,end);
+    }
+}
