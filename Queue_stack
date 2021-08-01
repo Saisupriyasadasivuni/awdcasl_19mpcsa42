@@ -1,0 +1,60 @@
+import java.util.*;
+public class queue
+{​​​
+public void push(int x) {​​​
+s1.push(x);
+}​​​
+public  int pop() 
+{​​​
+copystack();
+return s2.pop();
+}​​​
+public int peek()
+{
+copystack();
+return s2.peek();
+}
+public static boolean empty() 
+{
+return (s1.isEmpty() && s2.isEmpty());
+}
+public static void copystack()
+{
+if(s2.empty())
+{
+while(!s1.empty())
+{
+s2.push(s1.pop());
+}
+}
+}
+}
+class queue_stack
+{
+public static void main(String args[])
+{
+System.out.println("enter the num of queries:");
+int n=sc.nextInt();
+queue q=new queue(n);
+Scanner sc=new Scanner(System.in);
+Stack<Integer> s1=new Stack<Integer>();
+Stack<Integer> s2= new Stack<Integer>();
+System.out.println("1.Enqueue \n 2.Dequeue \n 3.display front");
+int m,ch;
+do
+{
+System.out.println("enter your choice:");
+ch=sc.nextInt();
+switch(ch)
+{
+case 1: m=sc.nextInt();
+           q.push(m);
+            break;
+case 2: q.pop();
+            break;
+case 3: System.out.println(q.peek());
+            break;
+}
+System.out.println("1.Enqueue \n 2.Dequeue \n 3.display front");
+}while(ch<=n);
+}}
