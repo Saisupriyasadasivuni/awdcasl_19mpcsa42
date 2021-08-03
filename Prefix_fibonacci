@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+class prefix_fibonacci {
+    public static void main(String args[]) throws IOException {
+        BufferedReader read =
+            new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(read.readLine());
+        while (t-- > 0) {
+            long n = Integer.parseInt(read.readLine());
+            Solution ob = new Solution();
+
+            System.out.println(ob.nthFibonacci(n));
+        }
+    }
+}
+// } Driver Code Ends
+
+
+//User function Template for Java
+
+//User function Template for Java
+class Solution{
+    static long nthFibonacci(long n){
+        int num=(int)n;
+        long p[]=new long[num+1];
+        p[0]=0;
+        p[1]=1;
+        for(int i=2;i<num+1;i++)
+            p[i]=(p[i-1]+p[i-2])%1000000007;
+        return p[num];
+    }
+}
