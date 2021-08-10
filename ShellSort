@@ -1,0 +1,30 @@
+import java.util.*;
+class Shellsort
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n:");
+int n=sc.nextInt();
+int ar[]=new int[n];
+System.out.println("enter arr elements:");
+for(int k=0;k<n;k++)
+ar[k]=sc.nextInt();
+int i,j,temp;
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(ar[i]>ar[j])
+{
+temp=ar[i];
+ar[i]=ar[j];
+ar[j]=temp;
+}
+}
+}
+System.out.println("After sorting :");
+for(i=0;i<n;i++)
+System.out.print(ar[i]+" ");
+}
+}
