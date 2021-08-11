@@ -1,0 +1,43 @@
+import java.util.*;
+class mergesort
+{
+static void merge(int ar[],int low,int high)
+{
+int temp;
+int i,j,mid;
+if(low!=high)
+{
+i=low;
+j=high;
+mid=(low+high)/2;
+merge(ar,low,mid);
+merge(ar,mid+1,high);
+mergeSort(ar,low,mid,high);
+}}
+static void mergeSort(int []ar,int low,int mid,int high)
+{
+int i,j,temp=0;
+i=low;
+j=high;
+//mid=(low+high)/2;
+if(i<=j)
+temp=ar[i];
+ar[i]=ar[j];
+ar[j]=temp;
+}
+
+public static void main(String args[])
+{
+int n;
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter no of elements:");
+n=sc.nextInt();
+int ar[]=new int[n];
+for(int i=0;i<n;i++)
+ar[i]=sc.nextInt();
+merge(ar,0,n-1);
+System.out.print("After sorting:");
+for(int i=0;i<n;i++)
+System.out.print(ar[i]+" ");
+}
+}
