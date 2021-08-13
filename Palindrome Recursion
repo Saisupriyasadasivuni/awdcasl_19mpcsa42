@@ -1,0 +1,29 @@
+import java.util.*;
+class rec_palindrome
+{
+ static int rev=0;
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n:");
+int n=sc.nextInt();
+int temp=n;
+if(reverse(n)==temp)
+System.out.println("palindrome");
+else
+System.out.println("not palindrome");
+}
+
+public static int reverse(int n)
+{
+if(n==0)
+return rev;
+else
+{
+int rem=n%10;
+rev=rem+rev*10;
+reverse(n/10); 
+return rev;
+}
+}
+}
