@@ -1,5 +1,5 @@
 import java.util.*;
-class recursion_arrays{
+class fib_recursion{
     public int fib(int n) {
         if(n==0)
             return 0;
