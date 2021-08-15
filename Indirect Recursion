@@ -1,0 +1,27 @@
+class IndirectRecursion
+{
+  final static int n=50;
+  static void odd(int x)
+   {
+     if(x<=n)
+     System.out.println(x);
+     else
+      return;
+     x+=5;
+     even(x);
+    }
+   static void even(int y)
+   {
+     if(y<=n)
+     System.out.println(y);
+     else
+      return;
+     y+=5;
+     odd(y);
+    }
+ public static void main(String args[])
+ {
+   int m=5;
+   odd(m);
+  }
+}
