@@ -1,0 +1,18 @@
+import java.util.*;
+class pre_fact
+{
+public static void main(String args[])
+{
+Scanner sc = new Scanner(System.in);
+int size=sc.nextInt();
+int prefix[]=new int[size];
+prefix[0]=1;
+for(int i=1;i<size;i++)
+    prefix[i]=prefix[i-1]*i;
+int q=sc.nextInt();
+for(int j=0;j<q;j++)
+{
+  int n=sc.nextInt();
+  System.out.println(prefix[n]);
+}
+}}
